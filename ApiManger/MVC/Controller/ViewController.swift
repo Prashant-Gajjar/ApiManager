@@ -38,13 +38,15 @@ class ViewController: UIViewController {
                 print("nil data")
                 return
             }
-            
-            if let json = try? JSONSerialization.jsonObject(with: data) {
-                print(json)
+                       
+            if let photosModel = try? PhotosModel(data: data) {
+                print(photosModel)
+            } else {
+                print("error while decoding")
             }
+            
         }
         task.resume()
-        
     }
 
 }
