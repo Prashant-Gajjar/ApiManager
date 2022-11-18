@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152B6ED92927CE4E0083DC65 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B6ED82927CE4E0083DC65 /* ApiManager.swift */; };
 		157997042926C48A00A50F37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157997032926C48A00A50F37 /* AppDelegate.swift */; };
 		157997082926C48A00A50F37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157997072926C48A00A50F37 /* ViewController.swift */; };
 		1579970B2926C48A00A50F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157997092926C48A00A50F37 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		152B6ED82927CE4E0083DC65 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		157997002926C48A00A50F37 /* ApiManger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiManger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157997032926C48A00A50F37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157997072926C48A00A50F37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				1579971D2926C7CB00A50F37 /* AppUtil.swift */,
 				1579971F2926CAD400A50F37 /* PhotosModel.swift */,
+				152B6ED82927CE4E0083DC65 /* ApiManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				1579971E2926C7CB00A50F37 /* AppUtil.swift in Sources */,
 				157997082926C48A00A50F37 /* ViewController.swift in Sources */,
+				152B6ED92927CE4E0083DC65 /* ApiManager.swift in Sources */,
 				157997202926CAD400A50F37 /* PhotosModel.swift in Sources */,
 				157997042926C48A00A50F37 /* AppDelegate.swift in Sources */,
 			);

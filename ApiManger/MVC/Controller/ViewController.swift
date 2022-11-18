@@ -18,36 +18,19 @@ class ViewController: UIViewController {
     
     //MARK: - Private Methods
     private func setup() {
-        let urlStrl = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true"
+        let urlStr = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true "
         
-        guard let url = URL(string: urlStrl) else {
-            print("wrong url")
-            return
-        }
-        
-        let request = URLRequest(url: url)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let data = data else {
-                print("nil data")
-                return
-            }
-                       
-            if let photosModel = try? PhotosModel(data: data) {
+        URLSession.shared.request(
+            url         : URL(string: urlStr),
+            expecting   : PhotosModel.self
+        ) { result in
+            switch result {
+            case .success(let photosModel):
                 print(photosModel)
-            } else {
-                print("error while decoding")
+            case .failure(let error):
+                print(error)
             }
-            
         }
-        task.resume()
     }
-
 }
 
