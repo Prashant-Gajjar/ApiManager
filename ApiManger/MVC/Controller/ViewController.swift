@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     //MARK: - Properties
+    let urlStr = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true"
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -18,12 +19,15 @@ class ViewController: UIViewController {
     
     //MARK: - Private Methods
     private func setup() {
-        let urlStr = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true "
-        
-        URLSession.shared.request(
+        apiCall()
+    }
+
+    private func apiCall() {
+        ApiManager.shared.requestCall(
             url         : URL(string: urlStr),
+            methods     : .GET,
             expecting   : PhotosModel.self
-        ) { result in
+        ){ result in
             switch result {
             case .success(let photosModel):
                 print(photosModel)
@@ -33,4 +37,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
