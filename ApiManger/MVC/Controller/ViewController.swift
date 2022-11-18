@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     
     //MARK: - Private Methods
     private func setup() {
-        let urlStrl = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true"
+        let urlStr = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true"
         
-        guard let url = URL(string: urlStrl) else {
+        guard let url = URL(string: urlStr) else {
             print("wrong url")
             return
         }
