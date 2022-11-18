@@ -18,10 +18,6 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Private Methods
-    private func setup() {
-        apiCall()
-    }
-
     private func apiCall() {
         ApiManager.shared.requestCall(
             url         : URL(string: urlStr),
