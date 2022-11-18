@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     //MARK: - Properties
+    let urlStr = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true"
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -18,36 +19,21 @@ class ViewController: UIViewController {
     
     //MARK: - Private Methods
     private func setup() {
-        let urlStr = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true"
-        
-        guard let url = URL(string: urlStr) else {
-            print("wrong url")
-            return
-        }
-        
-        let request = URLRequest(url: url)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let data = data else {
-                print("nil data")
-                return
-            }
-                       
-            if let photosModel = try? PhotosModel(data: data) {
-                print(photosModel)
-            } else {
-                print("error while decoding")
-            }
-            
-        }
-        task.resume()
+        apiCall()
     }
 
+    private func apiCall() {
+        ApiManager.shared.requestCall(
+            url         : URL(string: urlStr),
+            methods     : .GET,
+            expecting   : PhotosModel.self
+        ){ result in
+            switch result {
+            case .success(let photosModel):
+                print(photosModel)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
-
