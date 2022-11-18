@@ -48,6 +48,13 @@ class ApiManager {
     }
     
     //MARK: - Private Methods
+    
+    /// This is the method that can be used by any URLSession third party
+    /// - Parameters:
+    ///   - expecting: Pass Expected Model Type
+    ///   - data: data from api response
+    ///   - error: error from api response
+    ///   - completion: completion with `success` or `failure`
     private func fetch<T: Codable>(
         expecting   : T.Type,
         data        : Data?,
