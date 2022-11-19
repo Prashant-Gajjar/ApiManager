@@ -55,14 +55,14 @@ class PostVC: UIViewController {
         txtTitle.text = "Prashant"
         txtUserId.text = "001"
         txtBody.text = "iOS Developer"
-                
+        
         postListTableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
-                               forCellReuseIdentifier: "ListTableViewCell")
+                                   forCellReuseIdentifier: "ListTableViewCell")
         
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "\(classForCoder)"
     }
-
+    
     private func postApiCall(parameter: Dictionary<String,Any>) {
         
         let api = Constant.JsonplaceholderApis.jsonplaceholderPost(parameters: parameter)
