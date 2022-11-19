@@ -19,12 +19,19 @@ class GetVC: UIViewController {
         setup()
     }
     
+    //MARK: - Private IBAction
+    @IBAction private func btnReloadClicked() {
+        getApiCall()
+    }
+    
     //MARK: - Private Methods
     private func setup() {
-        
         listTableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
                                forCellReuseIdentifier: "ListTableViewCell")
         getApiCall()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "\(classForCoder)"
     }
     
     private func getApiCall() {
@@ -64,6 +71,6 @@ extension GetVC: UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
     }
 }

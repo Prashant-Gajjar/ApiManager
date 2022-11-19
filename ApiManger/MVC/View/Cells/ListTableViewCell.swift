@@ -11,7 +11,8 @@ class ListTableViewCell: UITableViewCell {
 
     //MARK: - Properties
     @IBOutlet private weak var lblTitle: UILabel!
-  
+    @IBOutlet private weak var lblUserId: UILabel!
+    @IBOutlet private weak var lblBody: UILabel!
     //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,5 +33,8 @@ class ListTableViewCell: UITableViewCell {
     //MARK: - Public Methods
     public func setupCell(obj: PlaceholderElement?) {
         lblTitle.text = obj?.title ?? "NA"
+        lblUserId.text = "\(obj?.userID ?? 0)"
+        lblBody.text = obj?.body ?? "NA"
+        
     }
 }

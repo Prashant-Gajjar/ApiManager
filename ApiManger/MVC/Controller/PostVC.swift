@@ -9,7 +9,7 @@ import UIKit
 
 class PostVC: UIViewController {
     //MARK: - Properties
-    @IBOutlet private weak var listTableView : UITableView!
+    @IBOutlet private weak var postListTableView : UITableView!
     @IBOutlet private weak var txtUserId     : UITextField!
     @IBOutlet private weak var txtTitle      : UITextField!
     @IBOutlet private weak var txtBody       : UITextField!
@@ -55,11 +55,12 @@ class PostVC: UIViewController {
         txtTitle.text = "Prashant"
         txtUserId.text = "001"
         txtBody.text = "iOS Developer"
-        
-        [txtBody, txtTitle, txtUserId].forEach({$0?.delegate = self})
-        
-        listTableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
+                
+        postListTableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
                                forCellReuseIdentifier: "ListTableViewCell")
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "\(classForCoder)"
     }
 
     private func postApiCall(parameter: Dictionary<String,Any>) {
@@ -71,12 +72,13 @@ class PostVC: UIViewController {
             methods     : api.method,
             expecting   : PlaceholderPost.self
         ){ [weak self] result in
+            guard let `self` = self else { return }
             switch result {
             case .success(let obj):
-                self?.placeholderModel = [PlaceholderElement(placeholderPost: obj)]
+                self.placeholderModel = [PlaceholderElement(placeholderPost: obj)]
                 DispatchQueue.main.async {
-                    self?.listTableView.reloadData()
-                    self?.listTableView.layoutIfNeeded()
+                    self.postListTableView.reloadData()
+                    self.postListTableView.layoutIfNeeded()
                 }
             case .failure(let error):
                 print(error)
@@ -119,7 +121,7 @@ extension PostVC: UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
     }
 }
 
