@@ -12,6 +12,13 @@ struct PlaceholderElement: Codable {
     let userID, id: Int?
     let title, body: String?
 
+    init(placeholderPost : PlaceholderPost) {
+        userID = Int(placeholderPost.userId)
+        id = placeholderPost.id
+        title = placeholderPost.title
+        body = placeholderPost.body
+    }
+    
     enum CodingKeys: String, CodingKey {
         case userID = "userId"
         case id, title, body
@@ -19,3 +26,8 @@ struct PlaceholderElement: Codable {
 }
 
 typealias Placeholder = [PlaceholderElement]
+
+struct PlaceholderPost: Codable {
+    let id: Int
+    let title, body, userId: String
+}

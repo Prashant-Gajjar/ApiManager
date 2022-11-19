@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GetVC.swift
 //  ApiManger
 //
 //  Created by Prashant Gajjar on 18/11/22.
@@ -7,12 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GetVC: UIViewController {
     //MARK: - Properties
     @IBOutlet private weak var listTableView: UITableView!
-    
-    private let urlStr = "https://jsonplaceholder.typicode.com/posts"
-    
+        
     private var placeholderModel: Placeholder?
     
     //MARK: - LifeCycle
@@ -23,19 +21,19 @@ class ViewController: UIViewController {
     
     //MARK: - Private Methods
     private func setup() {
-        listTableView.delegate = self
-        listTableView.dataSource = self
         
         listTableView.register(UINib(nibName: "ListTableViewCell", bundle: nil),
                                forCellReuseIdentifier: "ListTableViewCell")
-        
-        apiCall()
+        getApiCall()
     }
-
-    private func apiCall() {
+    
+    private func getApiCall() {
+        
+        let api = Constant.JsonplaceholderApis.jsonplaceholderGet
+        
         ApiManager.shared.requestCall(
-            url         : URL(string: urlStr),
-            methods     : .GET,
+            url         : URL(string: api.api),
+            methods     : api.method,
             expecting   : Placeholder.self
         ){ [weak self] result in
             switch result {
@@ -53,8 +51,8 @@ class ViewController: UIViewController {
 }
 
 //MARK: - TableView Methods
-extension ViewController: UITableViewDelegate,
-                          UITableViewDataSource {
+extension GetVC: UITableViewDelegate,
+                 UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return placeholderModel?.count ?? 0
     }
