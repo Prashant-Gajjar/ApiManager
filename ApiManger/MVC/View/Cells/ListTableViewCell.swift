@@ -11,13 +11,9 @@ class ListTableViewCell: UITableViewCell {
 
     //MARK: - Properties
     @IBOutlet private weak var lblTitle: UILabel!
-    
-    public var hit: Hit? {
-        didSet {
-            lblTitle.text = hit?.user ?? "NA"
-        }
-    }
-    
+    @IBOutlet private weak var lblUserId: UILabel!
+    @IBOutlet private weak var lblBody: UILabel!
+
     //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +21,6 @@ class ListTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        print(#function, " called")
-        #warning("prepareForReuse is not calling, why?")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,4 +29,11 @@ class ListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - Public Methods
+    public func setupCell(obj: PlaceholderElement?) {
+        lblTitle.text = obj?.title ?? "NA"
+        lblUserId.text = "\(obj?.userID ?? 0)"
+        lblBody.text = obj?.body ?? "NA"
+        
+    }
 }
