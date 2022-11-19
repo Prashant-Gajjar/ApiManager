@@ -20,8 +20,6 @@ class ListTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        print(#function, " called")
-        #warning("prepareForReuse is not calling, why?")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
