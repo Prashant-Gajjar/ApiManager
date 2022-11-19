@@ -11,9 +11,9 @@ class ViewController: UIViewController {
     //MARK: - Properties
     @IBOutlet private weak var listTableView: UITableView!
     
-    private let urlStr = "https://pixabay.com/api/?key=\(constant.apiKey)&q=yellow+flowers&image_type=photo&pretty=true"
+    private let urlStr = "https://jsonplaceholder.typicode.com/posts"
     
-    private var photosModel: PhotosModel?
+    private var placeholderModel: Placeholder?
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -36,11 +36,11 @@ class ViewController: UIViewController {
         ApiManager.shared.requestCall(
             url         : URL(string: urlStr),
             methods     : .GET,
-            expecting   : PhotosModel.self
+            expecting   : Placeholder.self
         ){ [weak self] result in
             switch result {
-            case .success(let photosModel):
-                self?.photosModel = photosModel
+            case .success(let obj):
+                self?.placeholderModel = obj
                 DispatchQueue.main.async {
                     self?.listTableView.reloadData()
                     self?.listTableView.layoutIfNeeded()
@@ -56,12 +56,12 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate,
                           UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photosModel?.hits?.count ?? 0
+        return placeholderModel?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
-        cell.hit = photosModel?.hits?[indexPath.row]
+        cell.setupCell(obj: placeholderModel?[indexPath.row])
         return cell
     }
     

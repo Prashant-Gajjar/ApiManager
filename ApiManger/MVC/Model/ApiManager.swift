@@ -41,7 +41,8 @@ class ApiManager {
         var request = URLRequest(url: url)
         request.httpMethod = methods.rawValue
         
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            self.checkResponse(response)
             self.fetch(expecting: expecting, data: data, error: error, completion: completion)
         }
         task.resume()
@@ -79,4 +80,14 @@ class ApiManager {
         }
     }
         
+    private func checkResponse(_ response: URLResponse?) {
+        if let response = response as? HTTPURLResponse {
+            guard (200...299) ~= response.statusCode else {
+                print("Status Code : ", response.statusCode)
+                print("Response : ", response)
+                return
+            }
+        }
+    }
+    
 }

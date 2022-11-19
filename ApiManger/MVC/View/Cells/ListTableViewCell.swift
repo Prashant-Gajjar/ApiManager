@@ -11,13 +11,7 @@ class ListTableViewCell: UITableViewCell {
 
     //MARK: - Properties
     @IBOutlet private weak var lblTitle: UILabel!
-    
-    public var hit: Hit? {
-        didSet {
-            lblTitle.text = hit?.user ?? "NA"
-        }
-    }
-    
+  
     //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,4 +29,8 @@ class ListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - Public Methods
+    public func setupCell(obj: PlaceholderElement?) {
+        lblTitle.text = obj?.title ?? "NA"
+    }
 }
