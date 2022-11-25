@@ -15,12 +15,10 @@ class Constant {
     private init() {
         
     }
-    
-    let apiKey = "31407132-980cbd0d0672136e9cefde8f4"
-    
-    enum JsonplaceholderApis {
-        case jsonplaceholderGet
-        case jsonplaceholderPost(parameters: Dictionary<String, Any>?)
+        
+    enum JsonPlaceholderApis {
+        case jsonPlaceholderGet
+        case jsonPlaceholderPost(parameters: Dictionary<String, Any>?)
         
         var api: String {
             return "https://jsonplaceholder.typicode.com/posts/"
@@ -28,9 +26,9 @@ class Constant {
         
         var method: ApiManager.HTTPSMethods {
             switch self{
-            case .jsonplaceholderGet:
+            case .jsonPlaceholderGet:
                 return .get
-            case .jsonplaceholderPost(let parameters):
+            case .jsonPlaceholderPost(let parameters):
                 return .post(parameters: parameters)
             }
         }

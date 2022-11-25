@@ -65,7 +65,7 @@ class PostVC: UIViewController {
     
     private func postApiCall(parameter: Dictionary<String,Any>) {
         
-        let api = Constant.JsonplaceholderApis.jsonplaceholderPost(parameters: parameter)
+        let api = Constant.JsonPlaceholderApis.jsonPlaceholderPost(parameters: parameter)
         
         ApiManager.shared.requestCall(
             url         : URL(string: api.api),
