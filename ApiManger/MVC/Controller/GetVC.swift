@@ -36,7 +36,7 @@ class GetVC: UIViewController {
     
     private func getApiCall() {
         
-        let api = Constant.JsonplaceholderApis.jsonplaceholderGet
+        let api = Constant.JsonPlaceholderApis.jsonPlaceholderGet
         
         ApiManager.shared.requestCall(
             url         : URL(string: api.api),
