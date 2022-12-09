@@ -97,12 +97,7 @@ class PostVC: UIViewController {
     }
     
     private func validationAlert(for txtFieldName: String) {
-        let alert = UIAlertController(title: "Validation!", message: "Please enter \(txtFieldName)", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Okay", style: .default)
-        alert.addAction(action)
-        
-        self.present(alert, animated: true)
-        return
+        showAlert(title: "Validation!", "Please enter \(txtFieldName)", on: self)
     }
 }
 

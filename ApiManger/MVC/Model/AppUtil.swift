@@ -5,12 +5,13 @@
 //  Created by Prashant Gajjar on 18/11/22.
 //
 
-import Foundation
+import UIKit
 
 let constant = Constant.shared
 
 class Constant {
     static let shared = Constant()
+    static let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     private init() {
         
