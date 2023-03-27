@@ -15,22 +15,4 @@ class Constant {
     private init() {
         
     }
-        
-    enum JsonPlaceholderApis {
-        case jsonPlaceholderGet
-        case jsonPlaceholderPost(parameters: Dictionary<String, Any>?)
-        
-        var api: String {
-            return "https://jsonplaceholder.typicode.com/posts/"
-        }
-        
-        var method: ApiManager.HTTPSMethods {
-            switch self{
-            case .jsonPlaceholderGet:
-                return .get
-            case .jsonPlaceholderPost(let parameters):
-                return .post(parameters: parameters)
-            }
-        }
-    }
 }

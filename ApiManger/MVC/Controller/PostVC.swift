@@ -65,25 +65,25 @@ class PostVC: UIViewController {
     
     private func postApiCall(parameter: Dictionary<String,Any>) {
         
-        let api = Constant.JsonPlaceholderApis.jsonPlaceholderPost(parameters: parameter)
-        
-        ApiManager.shared.requestCall(
-            url         : URL(string: api.api),
-            methods     : api.method,
-            expecting   : PlaceholderPost.self
-        ){ [weak self] result in
-            guard let `self` = self else { return }
-            switch result {
-            case .success(let obj):
-                self.placeholderModel = [PlaceholderElement(placeholderPost: obj)]
-                DispatchQueue.main.async {
-                    self.postListTableView.reloadData()
-                    self.postListTableView.layoutIfNeeded()
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        let api = Constant.JsonPlaceholderApis.jsonPlaceholderPost(parameters: parameter)
+//        
+//        ApiManager.shared.requestCall(
+//            url         : URL(string: api.api),
+//            methods     : api.method,
+//            expecting   : PlaceholderPost.self
+//        ){ [weak self] result in
+//            guard let `self` = self else { return }
+//            switch result {
+//            case .success(let obj):
+//                self.placeholderModel = [PlaceholderElement(placeholderPost: obj)]
+//                DispatchQueue.main.async {
+//                    self.postListTableView.reloadData()
+//                    self.postListTableView.layoutIfNeeded()
+//                }
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     //validations

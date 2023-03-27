@@ -35,14 +35,14 @@ class GetVC: UIViewController {
     }
     
     private func getApiCall() {
-        
-        let api = Constant.JsonPlaceholderApis.jsonPlaceholderGet
-        
-        ApiManager.shared.requestCall(
-            url         : URL(string: api.api),
-            methods     : api.method,
-            expecting   : Placeholder.self
-        ){ [weak self] result in
+                
+        let apiManager = ApiManager<Placeholder>(
+            baseUrl     : ApiBaseUrl(rawValue: "https://webhook.site/9bc7e40e-7c3e-4978-9c26-6ed34c786384"),
+            endPoint    : .posts,
+            httpMethods : .get
+        )
+
+        apiManager.requestCall { [weak self] result in
             switch result {
             case .success(let obj):
                 self?.placeholderModel = obj
