@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2783F532-0CF3-4ED9-8CA6-6D88C82E20C5"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B14AC1F-C00A-4892-9EC2-F5F6751B0907"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiManger/MVC/Controller/GetVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getApiCall()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B10187D-7D28-44BA-A7E8-14F7C449C79E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "decode(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2B10187D-7D28-44BA-A7E8-14F7C449C79E - ea31e91dcea65ef3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiManger.APIWrapper.decode(Foundation.Data) throws -&gt; &#x3c4;_0_0"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "2B10187D-7D28-44BA-A7E8-14F7C449C79E - ea31e91dcea65ef3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiManger.APIWrapper.decode(Foundation.Data) throws -&gt; &#x3c4;_0_0"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B8BDDE6-1980-4059-913B-08F81D96C2D5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "decode(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1B8BDDE6-1980-4059-913B-08F81D96C2D5 - ea31e91dcea65f12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiManger.APIWrapper.decode(Foundation.Data) throws -&gt; &#x3c4;_0_0"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "1B8BDDE6-1980-4059-913B-08F81D96C2D5 - ea31e91dcea65ef3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApiManger.APIWrapper.decode(Foundation.Data) throws -&gt; &#x3c4;_0_0"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF1DC853-D4C0-4BCD-91C8-884EDAFCD903"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "call(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BF1DC853-D4C0-4BCD-91C8-884EDAFCD903 - 741b8ad571f825fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ApiManger.APIWrapper.call(completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "BF1DC853-D4C0-4BCD-91C8-884EDAFCD903 - 741b8ad571f825fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ApiManger.APIWrapper.call(completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "388">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A628413-0550-41E5-BCC2-D3835D683CB0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "call(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8A628413-0550-41E5-BCC2-D3835D683CB0 - 741b8ad571f82681"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ApiManger.APIWrapper.call(completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "1048">
+               </Location>
+               <Location
+                  uuid = "8A628413-0550-41E5-BCC2-D3835D683CB0 - 741b8ad571f82681"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ApiManger.APIWrapper.call(completion: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ApiManger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunday/Documents/Projects/Personal_Code/ApiManager/ApiManger/MVC/Model/ApiManager/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "780">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
