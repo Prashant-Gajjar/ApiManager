@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostVC: UIViewController {
+class PostVC: UIViewController, AlertPresentable {
     //MARK: - Properties
     @IBOutlet private weak var postListTableView : UITableView!
     @IBOutlet private weak var txtUserId     : UITextField!
@@ -63,27 +63,27 @@ class PostVC: UIViewController {
         title = "\(classForCoder)"
     }
     
-    private func postApiCall(parameter: Dictionary<String,Any>) {
+    private func postApiCall(parameter: Dictionary<String, Any>) {
         
-//        let api = Constant.JsonPlaceholderApis.jsonPlaceholderPost(parameters: parameter)
-//        
-//        ApiManager.shared.requestCall(
-//            url         : URL(string: api.api),
-//            methods     : api.method,
-//            expecting   : PlaceholderPost.self
-//        ){ [weak self] result in
-//            guard let `self` = self else { return }
-//            switch result {
-//            case .success(let obj):
-//                self.placeholderModel = [PlaceholderElement(placeholderPost: obj)]
-//                DispatchQueue.main.async {
-//                    self.postListTableView.reloadData()
-//                    self.postListTableView.layoutIfNeeded()
-//                }
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        let apiManager = APIWrapper<PlaceholderPost>(
+            baseApi     : .jsonplaceholder,
+            method	    : .post,
+            parameter   : .formEncoded(parameter)
+        )
+
+        apiManager.call() { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let obj):
+                self.placeholderModel = [PlaceholderElement(placeholderPost: obj)]
+                DispatchQueue.main.async {
+                    self.postListTableView.reloadData()
+                    self.postListTableView.layoutIfNeeded()
+                }
+            case .failure(let error):
+                showAlert(title: "Error", message: error.localizedDescription)
+            }
+        }
     }
     
     //validations
@@ -97,12 +97,7 @@ class PostVC: UIViewController {
     }
     
     private func validationAlert(for txtFieldName: String) {
-        let alert = UIAlertController(title: "Validation!", message: "Please enter \(txtFieldName)", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Okay", style: .default)
-        alert.addAction(action)
-        
-        self.present(alert, animated: true)
-        return
+        showAlert(title: "Validation!", message: "Please enter \(txtFieldName)")
     }
 }
 

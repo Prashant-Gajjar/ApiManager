@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GetVC: UIViewController {
+class GetVC: UIViewController, AlertPresentable {
     //MARK: - Properties
     @IBOutlet private weak var listTableView: UITableView!
         
@@ -36,22 +36,21 @@ class GetVC: UIViewController {
     
     private func getApiCall() {
                 
-        let apiManager = ApiManager<Placeholder>(
-            baseUrl     : ApiBaseUrl(rawValue: "https://webhook.site/9bc7e40e-7c3e-4978-9c26-6ed34c786384"),
-            endPoint    : .posts,
-            httpMethods : .get
+        let apiManager = APIWrapper<Placeholder>(
+            baseApi     : .jsonplaceholder
         )
 
-        apiManager.requestCall { [weak self] result in
+        apiManager.call() { [weak self] result in
+            guard let self else { return }
             switch result {
             case .success(let obj):
-                self?.placeholderModel = obj
+                self.placeholderModel = obj
                 DispatchQueue.main.async {
-                    self?.listTableView.reloadData()
-                    self?.listTableView.layoutIfNeeded()
+                    self.listTableView.reloadData()
+                    self.listTableView.layoutIfNeeded()
                 }
             case .failure(let error):
-                print(error)
+                showAlert(title: "Error", message: error.localizedDescription)
             }
         }
     }
