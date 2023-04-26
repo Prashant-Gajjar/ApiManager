@@ -110,7 +110,6 @@ extension APIWrapper {
                 }
 
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data)
                     let dataModel = try self.decode(data)
                     DispatchQueue.main.async {
                         completion(.success(dataModel))
