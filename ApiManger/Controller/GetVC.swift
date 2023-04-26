@@ -44,10 +44,8 @@ class GetVC: UIViewController, AlertPresentable {
             switch result {
             case .success(let obj):
                 self.placeholderModel = obj
-                DispatchQueue.main.async {
-                    self.listTableView.reloadData()
-                    self.listTableView.layoutIfNeeded()
-                }
+                self.listTableView.reloadData()
+                self.listTableView.layoutIfNeeded()
             case .failure(let error):
                 showAlert(title: "Error", message: error.localizedDescription)
             }

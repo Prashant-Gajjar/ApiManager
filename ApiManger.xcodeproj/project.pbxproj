@@ -73,6 +73,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1538833F29F97280002D079E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				157799C029D21572008CA26B /* ApiManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		157799C029D21572008CA26B /* ApiManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				157997172926C58900A50F37 /* Application */,
-				1579971B2926C5E000A50F37 /* MVC */,
+				1538833C29F965B8002D079E /* Protocols */,
+				1538833F29F97280002D079E /* Managers */,
+				1579971C2926C5E700A50F37 /* Model */,
+				157997182926C5C600A50F37 /* Controller */,
+				1579971A2926C5D900A50F37 /* View */,
 				1579970C2926C48B00A50F37 /* Assets.xcassets */,
 				1579970E2926C48B00A50F37 /* LaunchScreen.storyboard */,
 				157997112926C48B00A50F37 /* Info.plist */,
@@ -146,23 +158,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1579971B2926C5E000A50F37 /* MVC */ = {
-			isa = PBXGroup;
-			children = (
-				1538833C29F965B8002D079E /* Protocols */,
-				1579971C2926C5E700A50F37 /* Model */,
-				157997182926C5C600A50F37 /* Controller */,
-				1579971A2926C5D900A50F37 /* View */,
-			);
-			path = MVC;
-			sourceTree = "<group>";
-		};
 		1579971C2926C5E700A50F37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				1579971F2926CAD400A50F37 /* PhotosModel.swift */,
 				15F7DE862928BB8B00D0DF27 /* PlaceholderModel.swift */,
-				157799C029D21572008CA26B /* ApiManager */,
 			);
 			path = Model;
 			sourceTree = "<group>";

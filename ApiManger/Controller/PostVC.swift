@@ -76,10 +76,8 @@ class PostVC: UIViewController, AlertPresentable {
             switch result {
             case .success(let obj):
                 self.placeholderModel = [PlaceholderElement(placeholderPost: obj)]
-                DispatchQueue.main.async {
-                    self.postListTableView.reloadData()
-                    self.postListTableView.layoutIfNeeded()
-                }
+                self.postListTableView.reloadData()
+                self.postListTableView.layoutIfNeeded()
             case .failure(let error):
                 showAlert(title: "Error", message: error.localizedDescription)
             }
