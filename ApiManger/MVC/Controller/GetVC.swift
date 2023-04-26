@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GetVC: UIViewController {
+class GetVC: UIViewController, AlertPresentable {
     //MARK: - Properties
     @IBOutlet private weak var listTableView: UITableView!
         
@@ -35,23 +35,21 @@ class GetVC: UIViewController {
     }
     
     private func getApiCall() {
-        
-        let api = Constant.JsonPlaceholderApis.jsonPlaceholderGet
-        
-        ApiManager.shared.requestCall(
-            url         : URL(string: api.api),
-            methods     : api.method,
-            expecting   : Placeholder.self
-        ){ [weak self] result in
+        let apiManager = APIWrapper<Placeholder>(
+            baseApi     : .jsonplaceholder
+        )
+
+        apiManager.call() { [weak self] result in
+            guard let self else { return }
             switch result {
             case .success(let obj):
-                self?.placeholderModel = obj
+                self.placeholderModel = obj
                 DispatchQueue.main.async {
-                    self?.listTableView.reloadData()
-                    self?.listTableView.layoutIfNeeded()
+                    self.listTableView.reloadData()
+                    self.listTableView.layoutIfNeeded()
                 }
             case .failure(let error):
-                print(error)
+                showAlert(title: "Error", message: error.localizedDescription)
             }
         }
     }
