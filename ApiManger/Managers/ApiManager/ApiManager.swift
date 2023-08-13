@@ -100,11 +100,17 @@ extension APIWrapper {
         do {
             let request = try generateURLRequest()
             URLSession.shared.dataTask(with: request) { data, _, error in
+                if let error {
+                    DispatchQueue.main.async {
+                        completion(.failure(error))
+                        print("\(#function) ", String(describing: error))
+                    }
+                    return
+                }
 
                 guard let data else {
                     DispatchQueue.main.async {
-                        completion(.failure(error ?? URLError(.badServerResponse)))
-                        print("\(#function) ", String(describing: error))
+                        completion(.failure(URLError(.badServerResponse)))
                     }
                     return
                 }
@@ -189,7 +195,7 @@ extension APIWrapper {
     fileprivate func decode(_ data: Data) throws -> T {
         do {
             return try JSONDecoder().decode(T.self, from: data)
-        } catch let error {
+        } catch {
             throw error
         }
     }
@@ -300,4 +306,3 @@ extension CharacterSet {
         return allowed
     }()
 }
-

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		151DBE432A88EF8E0073F739 /* GetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DBE422A88EF8E0073F739 /* GetViewModel.swift */; };
+		151DBE452A88F3800073F739 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151DBE442A88F3800073F739 /* PostViewModel.swift */; };
 		152B6ED92927CE4E0083DC65 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B6ED82927CE4E0083DC65 /* ApiManager.swift */; };
 		152B6EDD2927F80F0083DC65 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B6EDB2927F80F0083DC65 /* ListTableViewCell.swift */; };
 		152B6EDE2927F80F0083DC65 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152B6EDC2927F80F0083DC65 /* ListTableViewCell.xib */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151DBE422A88EF8E0073F739 /* GetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetViewModel.swift; sourceTree = "<group>"; };
+		151DBE442A88F3800073F739 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		152B6ED82927CE4E0083DC65 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		152B6EDB2927F80F0083DC65 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		152B6EDC2927F80F0083DC65 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151DBE412A88EF7E0073F739 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				151DBE422A88EF8E0073F739 /* GetViewModel.swift */,
+				151DBE442A88F3800073F739 /* PostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		152B6EDA2927F7F60083DC65 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +121,8 @@
 				1538833C29F965B8002D079E /* Protocols */,
 				1538833F29F97280002D079E /* Managers */,
 				1579971C2926C5E700A50F37 /* Model */,
-				157997182926C5C600A50F37 /* Controller */,
+				157997182926C5C600A50F37 /* ViewController */,
+				151DBE412A88EF7E0073F739 /* ViewModel */,
 				1579971A2926C5D900A50F37 /* View */,
 				1579970C2926C48B00A50F37 /* Assets.xcassets */,
 				1579970E2926C48B00A50F37 /* LaunchScreen.storyboard */,
@@ -125,13 +139,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		157997182926C5C600A50F37 /* Controller */ = {
+		157997182926C5C600A50F37 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				15F7DE882928DF0F00D0DF27 /* PostVC.swift */,
 				157997072926C48A00A50F37 /* GetVC.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		157997192926C5D000A50F37 /* Storyboard */ = {
@@ -239,8 +253,10 @@
 				1538833E29F965CC002D079E /* Alert+Protocol.swift in Sources */,
 				157799C429D21AD4008CA26B /* URLs+Enum.swift in Sources */,
 				157997042926C48A00A50F37 /* AppDelegate.swift in Sources */,
+				151DBE452A88F3800073F739 /* PostViewModel.swift in Sources */,
 				152B6EDD2927F80F0083DC65 /* ListTableViewCell.swift in Sources */,
 				15F7DE892928DF0F00D0DF27 /* PostVC.swift in Sources */,
+				151DBE432A88EF8E0073F739 /* GetViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
