@@ -13,6 +13,8 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet private weak var lblTitle: UILabel!
     @IBOutlet private weak var lblUserId: UILabel!
     @IBOutlet private weak var lblBody: UILabel!
+    
+    static let reuseIdentifier = "ListTableViewCell"
 
     //MARK: - LifeCycle
     override func awakeFromNib() {

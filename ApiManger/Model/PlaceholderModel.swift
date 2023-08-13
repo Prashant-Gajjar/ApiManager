@@ -25,8 +25,6 @@ struct PlaceholderElement: Codable {
     }
 }
 
-typealias Placeholder = [PlaceholderElement]
-
 struct PlaceholderPost: Codable {
     let id: Int
     let title, body, userId: String
